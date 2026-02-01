@@ -18,8 +18,8 @@ export default function Hero() {
 
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "/Muhammad_Shibli_MERN_Developer_CV.pdf";
-      link.download = "Muhammad_Shibli_MERN_Developer_CV.pdf";
+      link.href = "/MUHAMMED_RAZI.pdf";
+      link.download = "MUHAMMED_RAZI.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -40,33 +40,39 @@ export default function Hero() {
       className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between md:min-h-screen pt-16 pb-8 px-4 md:px-8 lg:px-16 md:gap-4"
     >
 <motion.div
-  className="md:w-1/2 flex justify-center order-2 md:order-1"
+className="md:w-1/2 flex justify-center order-2 md:order-1 md:mt-16 lg:mt-5"
+
   initial={{ opacity: 0, x: -50 }}
   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
   transition={{ duration: 0.8, delay: 0.3 }}
 >
-  {/* Glassmorphic Ring */}
-  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-[3px] 
-                  bg-white/10 backdrop-blur-xl 
-                  border border-white/20 shadow-2xl">
+  <div
+  className="relative w-64 h-48
+             md:w-[26rem] md:h-[17rem]
+             lg:w-[29rem] lg:h-[19.5rem]
+             rounded-3xl p-[3px]
+             bg-white/10 backdrop-blur-xl
+             border border-white/20 shadow-2xl"
+>
+  <div
+    className="absolute inset-0 rounded-3xl
+               bg-gradient-to-tr from-blue-500/20 via-transparent to-blue-400/10"
+  />
 
-    {/* Soft glow overlay */}
-    <div className="absolute inset-0 rounded-full bg-gradient-to-tr 
-                    from-blue-500/20 via-transparent to-blue-400/10" />
-
-    {/* MASKED image container */}
-    <div className="relative w-full h-full rounded-full overflow-hidden 
-                    bg-background border border-white/10 shadow-inner">
-      <Image
-        src="/heropic.jpeg"
-        alt="Muhammed Razi"
-        fill
-        className="object-cover object-center"
-        priority
-      />
-    </div>
-
+  <div
+    className="relative w-full h-full rounded-2xl overflow-hidden
+               bg-background border border-white/10 shadow-inner"
+  >
+    <Image
+      src="/hero3.jpeg"
+      alt="Muhammed Razi"
+      fill
+      className="object-cover object-[50%_30%]"
+      priority
+    />
   </div>
+</div>
+
 </motion.div>
 
 
