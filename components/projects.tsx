@@ -50,8 +50,8 @@ const projects = [
       "JWT",
       "REST APIs",
       "Netlify",
-      "Git",
       "Swagger",
+      "Github",
     ],
     duration: "Client: Moestay via ThinQ Technologies",
     links: null,
@@ -80,7 +80,7 @@ const projects = [
       "JWT",
     ],
     links: {
-      frontend: "https://github.com/Razirasheed03/Tailmate",
+      github: "https://github.com/Razirasheed03/Tailmate",
       live: "https://tailmate-care.vercel.app",
     },
   },
@@ -104,7 +104,7 @@ const projects = [
       "Vercel",
     ],
     links: {
-      frontend: "https://github.com/Razirasheed03/servicelink-platform",
+      github: "https://github.com/Razirasheed03/servicelink-platform",
       live: "https://servicelink.vercel.app",
     },
   },
@@ -181,6 +181,8 @@ export default function Projects() {
         return <SiSwagger className="text-white-400" />;
       case "Netlify":
         return <SiNetlify className="text-green-400" />;
+      case "Github":
+        return <SiGithub className="text-white-400" />;
       default:
         return <SiReact className="text-blue-400" />;
     }
@@ -239,84 +241,53 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="w-full space-y-2">
-                  {project.links ? (
-                    <div className="flex flex-col gap-2 w-full">
-                      {project.links.frontend && project.links.backend ? (
-                        <div className="flex gap-2">
-                          <Button
-                            variant="secondary"
-                            className="w-full gap-2"
-                            asChild
-                          >
-                            <a
-                              href={project.links.frontend}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <SiGithub className="h-4 w-4" />
-                              Frontend
-                            </a>
-                          </Button>
-                          <Button
-                            variant="secondary"
-                            className="w-full gap-2"
-                            asChild
-                          >
-                            <a
-                              href={project.links.backend}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <SiGithub className="h-4 w-4" />
-                              Backend
-                            </a>
-                          </Button>
-                        </div>
-                      ) : (
-                        project.links.github && (
-                          <Button
-                            variant="secondary"
-                            className="w-full gap-2"
-                            asChild
-                          >
-                            <a
-                              href={project.links.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <SiGithub className="h-4 w-4" />
-                              Source Code
-                            </a>
-                          </Button>
-                        )
-                      )}
-                      {project.links.live && (
-                        <Button className="w-full gap-2" asChild>
-                          <a
-                            href={project.links.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaExternalLinkAlt className="h-4 w-4" />
-                            Live
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  ) : (
-                    <Button
-                      variant="ghost"
-                      className="w-full text-muted-foreground hover:text-primary"
-                      onClick={() =>
-                        document
-                          .getElementById("contact")
-                          ?.scrollIntoView({ behavior: "smooth" })
-                      }
-                    >
-                      🔒 Confidential - Contact for Demo
-                    </Button>
-                  )}
-                </div>
+  {project.links ? (
+    <div className="flex flex-col gap-2 w-full">
+      {project.links.github && (
+        <Button
+          variant="secondary"
+          className="w-full gap-2"
+          asChild
+        >
+          <a
+            href={project.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGithub className="h-4 w-4" />
+            Source Code
+          </a>
+        </Button>
+      )}
+
+      {project.links.live && (
+        <Button className="w-full gap-2" asChild>
+          <a
+            href={project.links.live}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaExternalLinkAlt className="h-4 w-4" />
+            Live
+          </a>
+        </Button>
+      )}
+    </div>
+  ) : (
+    <Button
+      variant="ghost"
+      className="w-full text-muted-foreground hover:text-primary"
+      onClick={() =>
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+    >
+      🔒 Confidential - Contact for Demo
+    </Button>
+  )}
+</div>
+
               </CardFooter>
             </Card>
           </motion.div>
