@@ -71,18 +71,18 @@ export default function Contact() {
                     href="tel:+917902882660"
                     className="text-foreground hover:text-primary transition-colors"
                   >
-                    +91 7902882660
+                    +91 6235009441
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
                   <GithubIcon className="h-5 w-5 text-foreground" />
                   <a
-                    href="https://github.com/shxblx"
+                    href="https://github.com/razirasheed03"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-primary transition-colors"
                   >
-                    github.com/shxblx
+                    github.com/razirasheed03
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
@@ -99,12 +99,12 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <InstagramIcon className="h-5 w-5 text-foreground" />
                   <a
-                    href="https://www.instagram.com/shx.blx/"
+                    href="https://www.instagram.com/codewithrazi/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-primary transition-colors"
                   >
-                    instagram.com/shx.blx
+                    instagram.com/codewithrazi
                   </a>
                 </div>
               </div>
