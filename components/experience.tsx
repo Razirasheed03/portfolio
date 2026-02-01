@@ -38,50 +38,38 @@ export default function Experience() {
             <BriefcaseIcon className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <CardTitle>MERN Full Stack Developer</CardTitle>
+            <CardTitle>Frontend Developer</CardTitle>
             <p className="text-sm text-muted-foreground">
-              CS Tech Info Solutions (Client: Meena Bazaar) • Feb 2024 - Apr
-              2024
+          ThinQ Technologies (Freelance Project - Client: Moestay) • Dec 2025 - Feb 2026
             </p>
           </div>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-muted-foreground">
             <li>
-              • Developed admin dashboard analyzing lakhs+ sales records with
-              category/branch/supplier/article filters
+              • Developed responsive and scalable frontend interfaces for
+              an Airbnb-style property booking platform using Next.js and TypeScript
             </li>
             <li>
-              • Implemented automatic SQL to MongoDB data migration using cron
-              jobs (3-hour intervals)
+              • Implemented API integrations using RTK Query for efficient data fetching, caching, and state synchronization
             </li>
             <li>
-              • Designed RBAC system with granular controls for data access
-              (cost/gp/markup visibility)
+              • Built reusable UI components and page layouts following industry-standard frontend architecture and best practices
             </li>
             <li>
-              • Integrated NodeCache for API response caching, reducing load
-              times by 40%
+              • Implemented secure client-side authentication flows using JWT access and refresh tokens
             </li>
             <li>
-              • Built user management system with JWT authentication and
-              nodemailer credentials delivery
+              • Worked across property onboarding, booking workflows, and admin-related views with consistent UX patterns
             </li>
             <li>
-              • Added manual data migration option with temporary table
-              validation for data integrity
+              • Consumed and mapped backend REST APIs based on documented endpoint contracts
             </li>
             <li>
-              • Implemented Winston rotating logs and Helmet.js for security
-              hardening
+              • Collaborated closely with backend and design teams to convert business requirements into production-ready UI features
             </li>
             <li>
-              • Configured nightly cron jobs for data validation and historical
-              reporting
-            </li>
-            <li>
-              • Deployed full-stack solution on Plesk with optimized
-              React/Node.js configurations
+              • Applied responsive design techniques and frontend performance optimizations for smooth cross-device experience
             </li>
           </ul>
         </CardContent>
