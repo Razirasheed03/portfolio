@@ -1,48 +1,67 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const PERSONAL_INFO = `
-    Name: Muhammed Razi P P
+Name: Muhammed Razi P P
 Role: Full Stack MERN Developer
-Experience: 1.5+ years of hands-on experience, 2 months of industrial experience
-Skills: React.js, Redux, Node.js, Express.js, MongoDB, PostgreSQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Socket.IO, AWS, Vercel, Git, GitHub, Postman, Figma, Nginx, Cloudinary, Plesk
-Projects:
-1. Enterprise Sales Dashboard:
-   - Project Overview: A platform to display sales data categorized by specific category, branch, supplier, and article.
-   - Data Fields: amount, cost, quantity, GP, markup.
-   - Data Flow: Sales data is stored in an SQL database. A cron job (every three hours) automatically migrates the data to a MongoDB database. For performance, NodeCache is used.
-   - Admin Features: The main role admin can create users (with the ability to block, unblock, edit, and delete users) and assign a specific combination of data based on category, branch, or other criteria. The admin also controls access levels (online, cost, supplier access) to tailor the data visibility.
-   - Additional Features: Manual data migration option, JWT authentication for user logins, unified login for all users based on credentials, Redux/Tailwind/React.js for the frontend, Nodemailer for sending cron job update emails, and security enhancements using Helmet.
-   - Data Consistency: A midnight cron job deletes and re-imports the previous day's data to ensure validity. During migration, data is temporarily stored before replacing the main schema data. Winston Rotate File is used for logging.
-   - Deployment: Both frontend and backend are hosted on Plesk.
-   - Work Period: February 7th to April 7th.
-   - Company Details: Hired by CS Tech Infosolution; the offer letter was provided by the client company Meenabazaar (live link is confidential).
-2. Zephyr | Social Media Platform for Gamers Live | Frontend | Backend:
-   - Developed a feature-rich social platform using React.js, Node.js, Express.js, and MongoDB, enabling users to create profiles, make friends, join communities, and engage in real-time conversations.
-   - Implemented ZepAI, a gaming-focused chatbot assistant that helps users with gaming-related queries and provides game recommendations.
-   - Integrated Socket.IO for real-time messaging, notifications, and media sharing features for images, videos, and game clips.
-   - Utilized clean architecture principles and TypeScript to create a scalable and maintainable codebase.
-   - Built a comprehensive admin panel with user management, community moderation, and support ticket system.
-   - Implemented secure authentication using JWT and enhanced security with OTP verification via Nodemailer.
-   - Optimized performance by deploying the backend on AWS and the frontend on Vercel.
-   - GitHub Frontend: https://github.com/shxblx/Zephyr_frontend
-   - GitHub Backend: https://github.com/shxblx/zephyr_backend
-   - Live Link: https://www.zephyrforgamer.xyz/ or this https://zephyrforgamer.vercel.app/
-3. GrooveStyle | E-commerce Application Live | GitHub:
-   - Built a full-featured e-commerce platform using Express.js, Node.js, and MongoDB with MVC architecture.
-   - Implemented session authentication, OTP verification with Nodemailer, and functionality for password recovery.
-   - Integrated multiple payment options including COD, Razorpay for online transactions, and wallet system.
-   - Developed a comprehensive admin panel for product, category, and order management with analytics.
-   - Created features for product filtering, search functionality, and user wishlist management.
-   - Implemented product return system with wallet refund capability and referral program.
-   - GitHub: https://github.com/shxblx/Project1: groovestyle
-   - Live Link: https://groovestyle.onrender.com/
-Professional Experience: Worked as a Full Stack Developer at a startup for 2 months, solely responsible for frontend, backend, deployment, and testing.
-Education: Self-taught developer
-Contact: shiblibasheer27@gmail.com, +91 7902882660
+Experience: 1.5+ years of hands-on experience with additional freelance industrial experience as a frontend developer
+Contact: +91 6235009441 | razirasheed03@gmail.com
 LinkedIn: linkedin.com/in/razirasheed
 GitHub: github.com/razirasheed03
-Instagram: instagram.com/codewithrazi
-    `;
+
+Professional Summary:
+Passionate MERN Stack Developer with strong experience in building scalable, user-centric web applications. Proficient in JavaScript, React.js, Next.js, Node.js, Express.js, and MongoDB. Experienced in both full stack and frontend-focused roles, including freelance project work. Quick learner with a strong focus on clean architecture, performance optimization, and production-ready solutions.
+
+Technical Skills:
+Frontend: React.js, Next.js, Redux Toolkit, RTK Query, HTML, CSS, Tailwind CSS, Bootstrap  
+Backend: JavaScript, TypeScript, Node.js, Express.js  
+Databases: MongoDB, PostgreSQL, Firebase  
+Integrations & APIs: Razorpay, Stripe, Nodemailer, Multer, Cloudinary, Socket.IO, WebRTC, Mapbox  
+DevOps & Deployment: Docker, Nginx, AWS, Vercel, Render  
+Tools: Git, GitHub, Postman, Figma, VS Code  
+Core Knowledge: Data Structures & Algorithms
+
+Projects:
+
+1. TailMate | Complete Pet Care Ecosystem:
+- Developed a full-fledged pet care platform enabling pet adoption, selling, and intelligent matchmaking.
+- Implemented location-based pet discovery using Mapbox for geospatial search.
+- Built real-time chat and notification system using Socket.IO.
+- Integrated WebRTC-based audio/video consultations for veterinary appointments.
+- Designed scalable backend architecture using repository pattern, service layers, and dependency injection.
+- Developed role-based admin dashboard for managing users, vets, bookings, commissions, and moderation.
+- Implemented JWT-based authentication with role-based access control.
+- Deployed backend on Render and frontend on Vercel with Dockerized services.
+
+2. CaseVerse | E-commerce Application:
+- Built a complete e-commerce platform using Node.js, Express.js, and MongoDB with MVC architecture.
+- Implemented session-based authentication, OTP verification, and password recovery.
+- Integrated Razorpay, COD, and wallet-based payment systems.
+- Developed admin panel for product, category, and order management with analytics.
+- Implemented product search, filtering, wishlist, and return/refund workflows.
+
+3. Mini Projects:
+- Netflix Clone: Built using React.js and Firebase with authentication and responsive UI using Tailwind CSS.
+- OLX Clone: Developed a marketplace application using React.js and Tailwind CSS with user authentication and listing features.
+
+Professional Experience:
+
+Frontend Developer (Freelance)
+ThinQ Technologies (Freelance Project – Client: Moestay)
+Dec 2025 – Feb 2026
+- Built and maintained scalable frontend interfaces using Next.js and TypeScript.
+- Integrated backend REST APIs using RTK Query for efficient data fetching and caching.
+- Implemented secure client-side authentication flows using JWT access and refresh tokens.
+- Developed reusable UI components and maintained consistent UX across application workflows.
+- Collaborated with backend and design teams to deliver production-ready frontend features.
+
+Education:
+MERN Stack Development (2024 – Present)
+Brototype Calicut
+
+Higher Secondary Education – Computer Science (2022 – 2024)
+Sacred Heart Higher Secondary School, Kannur
+`;
+
 
 export async function getGeminiResponse(
   userMessage: string,
@@ -57,15 +76,16 @@ export async function getGeminiResponse(
   }
   try {
     const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-pro" });
+    const model = genAI.getGenerativeModel({ model: "models/gemini-2.5-flash" });
+
     const recentMessages = chatHistory.slice(-3);
     const contextPrompt = `
     Your name is Buddy,You are a helpful assistant for Muhammed Razi P P who answers questions about his portfolio, skills, experience, and projects.
     Be concise, friendly, and professional in your responses.
-    Only answer questions related to Shibli's professional background, skills, experience, projects, or general career advice.
-    If asked about anything not related to Shibli or his professional work, politely redirect the conversation back to relevant topics.
+    Only answer questions related to Razi's professional background, skills, experience, projects, or general career advice.
+    If asked about anything not related to Razi or his professional work, politely redirect the conversation back to relevant topics.
 
-    Here's information about Shibli:
+    Here's information about Razi:
     ${PERSONAL_INFO}
 
     Recent conversation:
@@ -77,7 +97,7 @@ export async function getGeminiResponse(
 
     User's latest question: ${userMessage}
 
-    Your response (staying focused on Shibli's professional information):`;
+    Your response (staying focused on Razi's professional information):`;
     const result = await model.generateContent(contextPrompt);
     const response = result.response;
     const text = response.text();

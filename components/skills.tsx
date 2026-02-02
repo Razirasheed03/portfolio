@@ -26,6 +26,10 @@ import {
   SiCloudinary,
   SiMapbox,
   SiBrevo,
+  SiRender,
+  SiJsonwebtokens,
+  SiRedis,
+  SiMailboxdotorg,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { DiVisualstudio, DiNodejs } from "react-icons/di";
@@ -54,6 +58,9 @@ const skills = [
   { name: "Socket.IO", icon: SiSocketdotio, color: "text-foreground" },
   { name: "Nginx", icon: SiNginx, color: "text-green-500" },
   { name: "Cloudinary", icon: SiCloudinary, color: "text-blue-400" },
+  { name: "Render", icon: SiRender, color: "text-green-400" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "text-black-400" },
+  { name: "Redis", icon: SiRedis, color: "text-black-400" },
   {
     name: "Brevo",
     icon: SiBrevo,
@@ -61,6 +68,7 @@ const skills = [
   },
   { name: "Node.js", icon: DiNodejs, color: "text-green-600" },
   { name: "Mapbox", icon: SiMapbox, color: "text-black-600" },
+  { name: "NodeMailer", icon: SiMailboxdotorg, color: "text-black-600" },
 ];
 
 export default function Skills() {

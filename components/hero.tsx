@@ -64,7 +64,7 @@ className="md:w-1/2 flex justify-center order-2 md:order-1 md:mt-16 lg:mt-5"
                bg-background border border-white/10 shadow-inner"
   >
     <Image
-      src="/hero3.jpeg"
+      src="/hero4.jpeg"
       alt="Muhammed Razi"
       fill
       className="object-cover object-[50%_30%]"

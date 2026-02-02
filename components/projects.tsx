@@ -33,6 +33,8 @@ import {
   SiNextdotjs,
   SiSwagger,
   SiNetlify,
+  SiJsonwebtokens,
+  SiRedis,
 } from "react-icons/si";
 import { FaAws, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -147,7 +149,7 @@ export default function Projects() {
       case "Razorpay":
         return <SiRazorpay className="text-blue-500" />;
       case "JWT":
-        return <SiJavascript className="text-yellow-400" />;
+        return <SiJsonwebtokens className="text-black-400" />;
       case "Next.js":
         return <SiNextdotjs className="text-black-600" />;
       case "Render":
@@ -183,6 +185,8 @@ export default function Projects() {
         return <SiNetlify className="text-green-400" />;
       case "Github":
         return <SiGithub className="text-white-400" />;
+        case "Redis":
+          return <SiRedis className="text-white-400"/>
       default:
         return <SiReact className="text-blue-400" />;
     }
