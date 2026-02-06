@@ -16,7 +16,13 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
+  // const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState(
+  typeof window !== "undefined" && window.location.pathname === "/projects"
+    ? "projects"
+    : "home"
+);
+
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -48,21 +54,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navbarHeight = 64;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - navbarHeight;
+const scrollToSection = (sectionId: string) => {
+  if (window.location.pathname !== "/") {
+    window.location.href = `/#${sectionId}`;
+    return;
+  }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-    setIsMenuOpen(false);
-  };
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const navbarHeight = 64;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition =
+      elementPosition + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+  setIsMenuOpen(false);
+};
+
 
   if (!mounted) return null;
 

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Muhammed Razi P P | MERN Stack Developer",
   description:
     "Portfolio website of Muhammed Razi P P, a Full Stack MERN Developer",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

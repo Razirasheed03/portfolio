@@ -18,8 +18,8 @@ export default function Hero() {
 
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "/MUHAMMED_RAZI.pdf";
-      link.download = "MUHAMMED_RAZI.pdf";
+      link.href = "/MUHAMMED_RAZI_RESUME.pdf";
+      link.download = "MUHAMMED_RAZI_RESUME.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -39,7 +39,7 @@ export default function Hero() {
       id="home"
       className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between md:min-h-screen pt-16 pb-8 px-4 md:px-8 lg:px-16 md:gap-4"
     >
-<motion.div
+{/* <motion.div
 className="md:w-1/2 flex justify-center order-2 md:order-1 md:mt-16 lg:mt-5"
 
   initial={{ opacity: 0, x: -50 }}
@@ -73,12 +73,52 @@ className="md:w-1/2 flex justify-center order-2 md:order-1 md:mt-16 lg:mt-5"
   </div>
 </div>
 
+</motion.div> */}
+<motion.div
+  className="md:w-1/2 flex justify-center order-2 md:order-1 md:mt-16 lg:mt-5"
+  initial={{ opacity: 0, x: -50 }}
+  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  <div className="md:hidden flex justify-center mb-4">
+    <div className="relative w-32 h-32 rounded-full p-[3px] bg-white/10 border border-white/20 shadow-xl">
+      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/30 via-transparent to-blue-400/20" />
+      <div className="relative w-full h-full rounded-full overflow-hidden">
+        <Image
+          src="/hero4.jpeg"
+          alt="Muhammed Razi"
+          fill
+          className="object-cover object-[50%_28%]"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    className="hidden md:block relative w-[26rem] h-[17rem] lg:w-[29rem] lg:h-[19.5rem]
+               rounded-3xl p-[3px]
+               bg-white/10 backdrop-blur-xl
+               border border-white/20 shadow-2xl"
+  >
+    <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-blue-500/20 via-transparent to-blue-400/10" />
+
+    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-background border border-white/10 shadow-inner">
+      <Image
+        src="/hero4.jpeg"
+        alt="Muhammed Razi"
+        fill
+        className="object-cover object-[50%_30%]"
+        priority
+      />
+    </div>
+  </div>
 </motion.div>
 
 
 
       <motion.div
-        className="md:w-1/2 space-y-3 md:space-y-4 order-1 md:order-2 text-center md:text-left mb-0"
+       className="md:w-1/2 space-y-4 md:space-y-4 order-1 md:order-2 text-center md:text-left mt-6 md:mt-0"
         initial={{ opacity: 0, x: 50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
         transition={{ duration: 0.8 }}
